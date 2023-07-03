@@ -7,6 +7,8 @@ Tambien puse en practica Gateway para enrutar las solicitudes de los clientes a 
 Lleve a cabo Rabbit MQ en el que me proporciona un modelo de cola de mensajes en el que los productores envían mensajes a una cola y los consumidores los reciben de manera asincrónica. En mi proyecto lo utilizo para crear las movies y series en el microservicio de catalogo, al crearse una movie o serie se produce un mensaje/evento el cual sera consumido por catalogo. Movie y serie son los productores y catalogo el consumidor.
 Utilice Zipkin para seguir el camino de una solicitud a medida que viaja a través de diferentes servicios y microservicios, asi tambien me ayuda a identificar los puntos de congestión, cuellos de botella y si hay algun error encontrar donde.
 A su vez implemente Docker para el despliegue de mi aplicacion y la orquestacion de contenedores. En mi Docker Compose hay contenedores de MySql, MongoDB, RabbitMQ y Zipkin.
+Solo Back End sin Front End
+
 
 ENGLISH: 
 The project follows a Netflix-style approach, consisting of 3 microservices: Movie, Series, and Catalog.
@@ -18,3 +20,4 @@ Gateway is also implemented to route client requests to the microservices, provi
 RabbitMQ is used to create a message queue model where producers send messages to a queue and consumers receive them asynchronously. In this project, it is used to create movies and series in the Catalog microservice. When a movie or series is created, a message/event is produced, which is consumed by the Catalog. Movie and Series act as producers, while Catalog acts as the consumer.
 Zipkin is used to trace the path of a request as it travels through different services and microservices. It helps identify congestion points, bottlenecks, and assists in error identification.
 Docker is employed for application deployment and container orchestration. The Docker Compose file includes containers for MySQL, MongoDB, RabbitMQ, and Zipkin.
+Back End only, no front end
